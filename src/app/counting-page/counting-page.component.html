@@ -1,0 +1,51 @@
+<div class="content">
+    <h1 style="font-weight: bold;">Shopping Cart Concept</h1>
+    <h2 style="font-weight: bold;">List of Item</h2>
+
+    <div class="itemlist">
+        <div class="item">
+            <h1>Tes Item 1</h1>
+            <img [src]="productimage" alt="">
+            <div class="listbutton">
+                <button class="btn btn-success" (click)="incrementitem1()">+</button>
+                <button class="btn btn-danger" (click)="decrementitem1()">-</button>
+            </div>
+            <h2>Quantity: {{ item1() }}</h2>
+        </div>
+
+        <div class="item">
+            <h1>Tes Item 2</h1>
+            <img [src]="productimage" alt="">
+            <div class="listbutton">
+                <button class="btn btn-success" (click)="incrementitem2()">+</button>
+                <button class="btn btn-danger" (click)="decrementitem2()">-</button>
+            </div>
+            <h2>Quantity: {{ item2() }}</h2>
+        </div>
+
+        <div class="item">
+            <h1>Tes Item 3</h1>
+            <img [src]="productimage" alt="">
+            <div class="listbutton">
+                <button class="btn btn-success" (click)="incrementitem3()">+</button>
+                <button class="btn btn-danger" (click)="decrementitem3()">-</button>
+            </div>
+            <h2>Quantity: {{ item3() }}</h2>
+        </div>
+
+        <div class="item">
+            <h1>Tes Item 4</h1>
+            <img [src]="productimage" alt="">
+            <div class="listbutton">
+                <button class="btn btn-success" (click)="incrementitem4()">+</button>
+                <button class="btn btn-danger" (click)="decrementitem4()">-</button>
+            </div>
+            <h2>Quantity: {{ item4() }}</h2>
+        </div>
+    </div>
+
+    <h2> 🛒 Total Items: {{totalItem()}}</h2>
+    <!-- Rencana kalau ada total 10 item, mau langsung buttonnya dilock lalu dikasih warning overload -->
+</div>
+
+

@@ -1,0 +1,174 @@
+.content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .features {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .features h2 {
+    color: #34495e;
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features li {
+    padding: 5px 0;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  .featurecontent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+
+    .feature1 {
+      background-color: rgb(145, 204, 246);
+      border: 3px solid black;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 300px;
+    }
+    
+    .feature1 img {
+      width: 250px;
+      height: 150px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 2px solid black;
+    }
+    
+    .feature1 h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .feature1 button {
+      padding: 8px 16px;
+      background-color: #3b19c4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .feature1 button:hover {
+      background-color: #2980b9;
+    }
+  }
+  
+  .contentAboutMe{
+    margin-top: 60px;
+    border: 4px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    img{
+      width: 400px;
+      height: 100%;
+      margin-right: 90px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .Information{
+      text-align: left;
+      margin-left: 30px;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 468px; 
+      padding: 20px;
+
+      h1{
+        font-size: 50px;
+        font-family: 'Helvetica', sans-serif;
+      }
+
+      h2{
+        font-size: 40px;
+        font-family: 'Helvetica', sans-serif;
+        margin-top: -0px;
+        font-weight: bold;
+      }
+
+      h3{
+        font-size: 15px;
+        text-align: justify;
+      }
+
+      .buttonaboutme{
+        text-align: center;
+        margin-top: 60px;
+
+        button{
+          padding: 10px 20px;
+          background-color: #005b5b;
+          color: rgb(255, 255, 255);
+          border: 2px solid whitesmoke;
+          border-radius: 8px;
+          cursor: pointer;
+          margin: 5px;
+          transition: background-color 0.3s ease;
+          font-size: 15px;
+        }
+
+        button:hover {
+          background-color: #0a005f;
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }

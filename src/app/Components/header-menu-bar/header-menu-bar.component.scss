@@ -1,0 +1,31 @@
+.menubar-content {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  li {
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #1a27bc; 
+  }
+
+  li.active {
+    background-color: #00274e; 
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+  

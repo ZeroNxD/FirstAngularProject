@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CRUDPageComponent } from './crud-page.component';
+import { ViewComponent } from './view.component';
 
-describe('CRUDPageComponent', () => {
-  let component: CRUDPageComponent;
-  let fixture: ComponentFixture<CRUDPageComponent>;
+describe('ViewComponent', () => {
+  let component: ViewComponent;
+  let fixture: ComponentFixture<ViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CRUDPageComponent]
+      imports: [ViewComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CRUDPageComponent);
+    fixture = TestBed.createComponent(ViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,121 @@
+<div class="form-container">
+    <h2>Edit Employee</h2>
+    <form (ngSubmit)="updateEmployee()" #employeeForm="ngForm">
+      <button class="btn btn-primary" style="margin-bottom: 20px; width: 150px;" [routerLink]="'/CRUD'">Back to List</button>
+      <div class="form-group">
+        <label for="Nama">Name</label>
+        <input type="text" id="Nama" [(ngModel)]="employee.Nama" name="Nama" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="NIK">NIK</label> 
+        <input type="text" id="NIK" [(ngModel)]="employee.NIK" name="NIK" required pattern="[0-9]{10,19}" (keypress)="allowNumbersOnly($event)"/>
+      </div>
+  
+      <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" [(ngModel)]="employee.Email" name="Email" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="Gender">Gender</label>
+        <select id="Gender" [(ngModel)]="employee.Gender" name="Gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="Address">Address</label>
+        <textarea id="Address" [(ngModel)]="employee.Address" name="Address" rows="3"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB" [(ngModel)]="employee.DOB" name="DOB" required/>
+      </div>
+  
+      <div class="form-group">
+        <label for="POB">Place of Birth</label>
+        <input type="text" id="POB" [(ngModel)]="employee.POB" name="POB" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="Religion">Religion</label>
+        <select id="Religion" [(ngModel)]="employee.Religion" name="Religion" required>
+          <option value="" disabled selected>Select Religion</option>
+          <option value="Islam">Islam</option>
+          <option value="Christian">Christian</option>
+          <option value="Catholic">Catholic</option>
+          <option value="Hindu">Hindu</option>
+          <option value="Buddha">Buddha</option>
+          <option value="Konghucu">Konghucu</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="Height">Height (cm)</label>
+        <input type="number" id="Height" [(ngModel)]="employee.Height" name="Height" (keypress)="allowNumbersOnly($event)" />
+      </div>
+  
+      <div class="form-group">
+        <label for="Weight">Weight (kg)</label>
+        <input type="number" id="Weight" [(ngModel)]="employee.Weight" name="Weight" (keypress)="allowNumbersOnly($event)" />
+      </div>
+  
+      <div class="form-group">
+        <label for="TypeBlood">Blood Type</label>
+        <select id="TypeBlood" [(ngModel)]="employee.TypeBlood" name="TypeBlood" required>
+          <option value="" disabled selected>Select Blood Type</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="Status">Status</label>
+        <select id="Status" [(ngModel)]="employee.Status" name="Status">
+          <option value="" disabled selected>Select Status</option>
+          <option value="Single">Single</option>
+          <option value="Married">Married</option>
+          <option value="Divorced">Divorced</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="KidsNumber">Number of Kids</label>
+        <input type="number" id="KidsNumber" [(ngModel)]="employee.KidsNumber" name="KidsNumber" (keypress)="allowNumbersOnly($event)"/>
+      </div>
+  
+      <div class="form-group">
+        <label for="Division">Division</label>
+        <input type="text" id="Division" [(ngModel)]="employee.Division" name="Division" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="Company">Company</label>
+        <input type="text" id="Company" [(ngModel)]="employee.Company" name="Company" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="Roles">Role</label>
+        <select id="Roles" [(ngModel)]="employee.Roles" name="Roles" required>
+          <option value="Internship">Internship</option>
+          <option value="Full-Time Manager">Full-Time Manager</option>
+          <option value="Part-Time">Part-Time</option>
+          <option value="Contract">Contract</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Update Employee</button>
+    </form>
+  
+    <p *ngIf="message" class="message">{{ message }}</p>
+  </div>
+  

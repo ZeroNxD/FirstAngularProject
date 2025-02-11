@@ -15,12 +15,30 @@ export const routes: Routes = [
             return import('./counting-page/counting-page.component').then(m => m.CountingPageComponent);
         },
     },
+    // Home CRUD 
     {
         path: 'CRUD',
         loadComponent: () => {
-            return import('./crud-page/crud-page.component').then(m => m.CRUDPageComponent);
+            return import('./employee/view/view.component').then(m => m.ViewComponent);
         },
     },
+
+    // Create Employee
+    {
+        path: 'CRUD/Create',
+        loadComponent: () => {
+            return import('./employee/create/create.component').then(m => m.CreateComponent);
+        },
+    },
+
+    // Edit Employee
+    {
+        path: 'CRUD/:EmployeeID/Edit',
+        loadComponent: () => {
+            return import('./employee/edit/edit.component').then(m => m.EditComponent);
+        },
+    },
+
     {
         path: 'aboutme',
         loadComponent: () => {

@@ -1,0 +1,56 @@
+<div class="content">
+    <h1>Employee CRUD System</h1>
+
+    <div class="button1">
+        <button class="btn btn-primary" style="width: 200px; padding: 10px;" [routerLink]="'/CRUD/Create'">Add New Employee</button>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NIK</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>DOB [Date of Birth]</th>
+            <th>POB [Place of Birth</th>
+            <th>Religion</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Blood Type</th>
+            <th>Status</th>
+            <th>Kids Number</th>
+            <th>Division</th>
+            <th>Company</th>
+            <th>Roles</th>
+            <th>Action</th>
+        </tr>
+        @for (employee of employeeList(); track employee.EmployeeID) {
+            <tr>
+                <td>{{employee.EmployeeID}}</td>
+                <td>{{employee.NIK}}</td>
+                <td>{{employee.Nama}}</td>
+                <td>{{employee.Email}}</td>
+                <td>{{employee.Gender}}</td>
+                <td>{{employee.Address}}</td>
+                <td>{{employee.DOB}}</td>
+                <td>{{employee.POB}}</td>
+                <td>{{employee.Religion}}</td>
+                <td>{{employee.Height}}</td>
+                <td>{{employee.Weight}}</td>
+                <td>{{employee.TypeBlood}}</td>
+                <td>{{employee.Status}}</td>
+                <td>{{employee.KidsNumber}}</td>
+                <td>{{employee.Division}}</td>
+                <td>{{employee.Company}}</td>
+                <td>{{employee.Roles}}</td>
+                <td>
+                    <button class="btn btn-warning" [routerLink]="['/CRUD', employee.EmployeeID, 'Edit']">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteEmployee(employee.EmployeeID)">   Delete</button>
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
